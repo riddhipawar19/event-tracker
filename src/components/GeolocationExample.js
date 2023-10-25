@@ -9,6 +9,8 @@ function GeolocationExample() {
       navigator.geolocation.getCurrentPosition((position) => {
         // Handle the geolocation data
         const { latitude, longitude } = position.coords;
+        // localStorage.setItem("latitude", latitude);
+        // localStorage.setItem("longitude", longitude);
         setLocation({ latitude, longitude });
       }, (error) => {
         // Handle geolocation error
@@ -20,7 +22,7 @@ function GeolocationExample() {
   }, []);
 
   return (
-    <div>
+    <div> 
       <h1>Geolocation Example</h1>
       {location ? (
         <div>
